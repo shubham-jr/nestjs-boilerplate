@@ -1,0 +1,23 @@
+// steps
+
+1. We have to setup the validation pipe
+2. Have to setup the database connection in common module
+3. Have to setup the config with validaiton
+4. have to install import prettier plugin
+5. make a seprate file for .env like .env.development, .env.production
+6. set the node env so that we can decide which file to use {"start:dev": "NODE_ENV=dev nest start --watch"}
+7. decorator decomposition
+8. auth Guards, role guard, setting roles metadata and public 
+
+// commands
+
+npm i mongoose @nestjs/mongoose class-validator class-transformer
+npm i @nestjs/passport passport passport-jwt
+npm i @nestjs/jwt
+npm i @nestjs/config joi
+npm i prettier-plugin-organize-imports
+
+// configuration flowchart
+
+first we have to setup the config module and validaiton schema, then we have to setup the registerAs 
+and then we have to use the config service to get the values from the .env file
