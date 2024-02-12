@@ -4,10 +4,10 @@ import { AppService } from './app.service';
 import { CommonModule } from './common/common.module';
 import { DatabaseModule } from './database/database.module';
 import { EnvModule } from './env/env.module';
-import { AuthModule } from './auth/auth.module';
+import { TodoModule } from './todo/todo.module';
 
 @Module({
-  imports: [EnvModule, CommonModule, DatabaseModule, AuthModule],
+  imports: [EnvModule, CommonModule, DatabaseModule, TodoModule],
   controllers: [AppController],
   providers: [AppService],
 })

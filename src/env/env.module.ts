@@ -11,7 +11,6 @@ const ENV = process.env.NODE_ENV;
       validationSchema: ENV_VALIDATION_SCHEMA,
       envFilePath: `.env.${ENV}`,
       validationOptions: {
-        // allowUnknown: false,
         abortEarly: true,
       },
     }),

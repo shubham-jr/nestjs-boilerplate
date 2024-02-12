@@ -1,9 +1,13 @@
-import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
-import { CommonService } from './common.service';
+import { Module, ValidationPipe } from '@nestjs/common';
+import { APP_PIPE } from '@nestjs/core';
+import { VALIDATION_PIPE_OPTIONS } from './constants/common.constant';
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest')],
-  providers: [CommonService],
+  providers: [
+    {
+      provide: APP_PIPE,
+      useValue: new ValidationPipe(VALIDATION_PIPE_OPTIONS),
+    },
+  ],
 })
 export class CommonModule {}
